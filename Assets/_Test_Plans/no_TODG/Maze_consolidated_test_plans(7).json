@@ -1,0 +1,1713 @@
+{
+  "taskUnits": [
+    {
+      "actionUnits": [
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (2)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 94437190,
+          "condition": "Scene wiring: EventTrigger (MonoBehaviour fileID 114000011833207400; script guid d0b148fe25e99eb48b9724523833bab1) has m_Delegates[eventID=0] -> Waypoint.Enter(). Waypoint component is MonoBehaviour fileID 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993) with serialized settings matching the provided script. Expect state Idle -> Focused.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (2)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 94437190,
+          "condition": "Scene wiring: EventTrigger m_Delegates[eventID=1] -> Waypoint.Exit() on the same Waypoint component (114000013353947326). Exit only transitions when current state == Focused; expect Focused -> Idle.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (2)",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 94437190,
+          "condition": "Scene wiring: EventTrigger m_Delegates[eventID=4] -> Waypoint.Click() on component 114000013353947326. Expect: plays AudioSource clip_click, state Clicked then Approaching; Update calls Hide() and Approach() (moves 'Camera Holder' to waypoint position + (0,0.7,0)).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (6)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 320611642,
+          "condition": "This GameObject is a PrefabInstance (fileID 320611642) named 'Coin (6)'. It has two MonoBehaviours: (1) Coin script (MonoBehaviour fileID 114000012871899810, guid 4259efea429e3458b997fe590ca4b9f1) which matches the provided Coin : Collectible script and exposes fields poof, rotationSpeed, collect_sound and a public no-arg method Collect() inherited from Collectible; (2) EventTrigger (MonoBehaviour fileID 114000012973806018, guid d0b148fe25e99eb48b9724523833bab1) with m_Delegates eventID 4 (PointerClick) whose m_Calls invoke Coin.Collect(). Collider (classID 135) is present; Rigidbody not specified. We manually trigger Collect() to validate the configured EventTrigger m_Calls behavior.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (9)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 352165311,
+          "condition": "EventTrigger MonoBehaviour (fileID 114000011833207400, guid d0b148fe25e99eb48b9724523833bab1) has m_Delegates eventID 0 calling Waypoint.Enter() on MonoBehaviour (fileID 114000013353947326, guid 18f754fc3d17b49db8e3d3dde994b993). Expected: state Idle→Focused with highlight/scale per serialized config.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (9)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 352165311,
+          "condition": "EventTrigger MonoBehaviour (fileID 114000011833207400) m_Delegates eventID 1 maps to Waypoint.Exit() on MonoBehaviour (fileID 114000013353947326). Expected: state Focused→Idle to avoid non-working clicks per script comment.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (9)",
+          "triggerring_time": 2.5,
+          "source_object_fileID": 352165311,
+          "condition": "EventTrigger MonoBehaviour (fileID 114000011833207400) m_Delegates eventID 4 maps to Waypoint.Click() on MonoBehaviour (fileID 114000013353947326). Serialized config: lerp_clicked=0.5, scale_clicked_max=2, rotation_speed=90, displacement_idle_max=0.4, clip_click guid a72739540860de04b8b0d8869e601e2e. Expected: state Clicked→Approaching when scale≈2, audio plays, waypoint hides, and Camera Holder moves to waypoint initial position + (0,0.7,0) then becomes Occupied.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (6)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 371604065,
+          "condition": "EventTrigger (MonoBehaviour fileID 114000011833207400, script guid d0b148fe25e99eb48b9724523833bab1) maps eventID 0 (PointerEnter) to Waypoint.Enter on MonoBehaviour fileID 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993). Expect state Idle -> Focused; visual scale/color lerp to focus settings.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (6)",
+          "triggerring_time": 2.0,
+          "source_object_fileID": 371604065,
+          "condition": "EventTrigger (MonoBehaviour fileID 114000011833207400) maps eventID 4 (PointerClick) to Waypoint.Click on MonoBehaviour fileID 114000013353947326. Expect state Clicked with audio, then auto transition to Approaching as scale reaches threshold, calling Hide() + Approach() in Update; camera holder should move toward waypoint and state becomes Occupied when positions match.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (6)",
+          "triggerring_time": 0.3,
+          "source_object_fileID": 371604065,
+          "condition": "Manual trigger of Waypoint.Approach (public no-arg) on MonoBehaviour fileID 114000013353947326 to force camera holder to _initial_position + (0,0.7,0). This simulates occupancy without relying on the Clicked->Approaching animation. On next Update, Idle will detect occupied and set state to Occupied.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Approach",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (1)",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 429518648,
+          "condition": "Simulate EventTrigger PointerEnter (eventID: 0) on MyWaypoint (1). Scene MonoBehaviour_0 (script guid d0b148fe25e99eb48b9724523833bab1 = EventTrigger) has m_Calls mapping eventID 0 -> Waypoint.Enter on MonoBehaviour_1 id 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993 = Waypoint). Serialized config matches Waypoint fields (e.g., lerp_focus=0.4, scale_focus_min=1.1, scale_focus_max=1.4). Expect state Idle -> Focused with focus lerps.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (1)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 429518648,
+          "condition": "Simulate EventTrigger PointerExit (eventID: 1). Scene MonoBehaviour_0 maps eventID 1 -> Waypoint.Exit on MonoBehaviour_1 id 114000013353947326. Expect state Focused -> Idle to avoid non-working clicks per script comment.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (1)",
+          "triggerring_time": 1.0,
+          "source_object_fileID": 429518648,
+          "condition": "Simulate EventTrigger PointerClick (eventID: 4). Scene MonoBehaviour_0 maps eventID 4 -> Waypoint.Click on MonoBehaviour_1 id 114000013353947326. Expect audio clip a72739540860de04b8b0d8869e601e2e to play, state -> Clicked then Approaching as scale reaches ~scale_clicked_max, then Hide+Approach move 'Camera Holder' to waypoint position + (0,0.7,0), eventually Occupied.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (10)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 430583329,
+          "condition": "EventTrigger (MonoBehaviour fileID 114000012973806018, guid d0b148fe25e99eb48b9724523833bab1) has m_Delegates with eventID 4 (PointerClick). Persistent m_Calls target MonoBehaviour fileID 114000012871899810 (guid 4259efea429e3458b997fe590ca4b9f1) and invoke method 'Collect' (no params). This MonoBehaviour holds the serialized settings for the attached script (poof prefab, rotationSpeed=160, collect_sound). Trigger this event to validate collection behavior when a click-like interaction occurs.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (1)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 564272732,
+          "condition": "Scene config confirms MonoBehaviour fileID 114000012871899810 (script guid 4259efea429e3458b997fe590ca4b9f1) is the Coin component (inherits Collectible) attached to Coin (1); it exposes base fields poof, rotationSpeed=160, collect_sound. An EventTrigger component (script guid d0b148fe25e99eb48b9724523833bab1) has m_Delegates eventID=4 with a persistent call to method Collect() on that Coin MonoBehaviour. Manually invoke Collect() to simulate the configured interactable event (in case it’s not auto-fired). Expected: play collect_sound, spawn poof, and mark/destroy coin as collected.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (3)",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 577911899,
+          "condition": "Simulate EventTrigger eventID 0 (PointerEnter) mapped via MonoBehaviour fileID 114000011833207400 to Waypoint.Enter on MonoBehaviour fileID 114000013353947326 (script GUID 18f754fc3d17b49db8e3d3dde994b993). Expected: Idle -> Focused (lerp_focus=0.4, scale_focus_min=1.1, scale_focus_max=1.4, displacement_idle_max=0.4).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (3)",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 577911899,
+          "condition": "Simulate EventTrigger eventID 1 (PointerExit) mapped via MonoBehaviour fileID 114000011833207400 to Waypoint.Exit on MonoBehaviour fileID 114000013353947326. Only transitions to Idle from Focused; run after Enter.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (3)",
+          "triggerring_time": 2.0,
+          "source_object_fileID": 577911899,
+          "condition": "Simulate EventTrigger eventID 4 (PointerClick) mapped via MonoBehaviour fileID 114000011833207400 to Waypoint.Click on MonoBehaviour fileID 114000013353947326. Serialized config: lerp_clicked=0.5, scale_clicked_max=2, rotation_speed=90, clip_click guid a72739540860de04b8b0d8869e601e2e. Expected: play click sound, state Clicked -> auto Approaching when scale >= 0.95*2, then camera 'Camera Holder' moved to waypoint (_initial_position + (0,0.7,0)), waypoint hides (lerp_hide=1) and may become Occupied.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (4)",
+          "triggerring_time": 1.0,
+          "source_object_fileID": 645119072,
+          "condition": "Scene EventTrigger MonoBehaviour (script guid d0b148fe25e99eb48b9724523833bab1, fileID 114000011833207400) maps eventID 0 (PointerEnter) to Waypoint.Enter() on Waypoint MonoBehaviour (script guid 18f754fc3d17b49db8e3d3dde994b993, fileID 114000013353947326). Waypoint is configured per scene: lerp_focus=0.4, scale_focus_min=1.1, scale_focus_max=1.4, displacement_idle_min=0, displacement_idle_max=0.4, rotation_speed=90. Expected: Enter transitions Idle->Focused and begins focus lerp.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (4)",
+          "triggerring_time": 1.0,
+          "source_object_fileID": 645119072,
+          "condition": "Scene EventTrigger MonoBehaviour (fileID 114000011833207400) maps eventID 1 (PointerExit) to Waypoint.Exit() on Waypoint MonoBehaviour (fileID 114000013353947326). Expected: Exit only transitions Focused->Idle (guarded: only from Focused).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (4)",
+          "triggerring_time": 3.0,
+          "source_object_fileID": 645119072,
+          "condition": "Scene EventTrigger MonoBehaviour (fileID 114000011833207400) maps eventID 4 (PointerClick) to Waypoint.Click() on Waypoint MonoBehaviour (fileID 114000013353947326). Waypoint config includes: lerp_clicked=0.5, scale_clicked_max=2, lerp_hide=1, clip_click set. Expected: Click sets state=Clicked, plays audio; after scaling to ~95% of 2, state->Approaching; Update calls Approach() which moves 'Camera Holder' to _initial_position+(0,0.7,0) and starts hide effect.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (4)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 645119072,
+          "condition": "Directly invoke Waypoint.Approach() on Waypoint MonoBehaviour (fileID 114000013353947326) to validate camera movement independent of click flow. Expected: 'Camera Holder' localPosition becomes waypoint _initial_position+(0,0.7,0), rotation reset; Update may transition to Occupied if camera position equals the expected world position.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Approach",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (2)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 697694276,
+          "condition": "EventTrigger (MonoBehaviour fileID 114000012973806018, guid d0b148fe25e99eb48b9724523833bab1) has m_Delegates eventID=4 (PointerClick) calling Collect() on MonoBehaviour fileID 114000012871899810. MonoBehaviour fileID 114000012871899810 corresponds to the Coin script (guid 4259efea429e3458b997fe590ca4b9f1), which derives from Collectible and serializes fields: poof (prefab), rotationSpeed=160, collect_sound (AudioClip). Trigger this manually to simulate click when automatic pointer events are not available; expected behavior: play collect_sound, spawn poof, mark coin collected/disable visual.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (12)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 747740936,
+          "condition": "MonoBehaviour 114000012871899810 (m_Script guid 4259efea429e3458b997fe590ca4b9f1) matches the Coin : Collectible component with serialized fields {poof, rotationSpeed:160, collect_sound}. EventTrigger MonoBehaviour 114000012973806018 contains m_Delegates eventID 4 (PointerClick) with m_Calls targeting 114000012871899810.method 'Collect'. Manually invoke Collect() to simulate this interaction if it does not occur automatically.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Unknown",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 784371047,
+          "condition": "PrefabInstance fileID 784371047 is a Coin (layer 8, tag Coin). MonoBehaviour_0 (fileID 114000012871899810, guid 4259efea429e3458b997fe590ca4b9f1) is the Coin/Collectible script instance with fields: poof set, rotationSpeed=160, collect_sound set. MonoBehaviour_1 (fileID 114000012973806018, guid d0b148fe25e99eb48b9724523833bab1) is an EventTrigger with m_Delegates eventID=4 calling MonoBehaviour_0.Collect via m_Calls. To ensure this interactable event is exercised even if not triggered automatically, manually invoke Collect on MonoBehaviour_0.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Crystal",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 595963424,
+          "condition": "Crystal.Start() disables MeshCollider to block clicks until the player enters the temple. Manually simulate this gate by calling Crystal.MakeClickable() on MonoBehaviour fileID 791898217 (script GUID 7ec1f4a241dbe3243aed64a4afbc8b66). This enables the MeshCollider so the EventTrigger can fire.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 791898217,
+                  "method_name": "MakeClickable",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Crystal",
+          "triggerring_time": 1.2,
+          "source_object_fileID": 595963424,
+          "condition": "EventTrigger (MonoBehaviour fileID 791898216, script GUID d0b148fe25e99eb48b9724523833bab1) has m_Delegates eventID=4 mapped to call Crystal.Touch() on MonoBehaviour fileID 791898217. With collider enabled, simulate a click by invoking Touch directly. Expected: play greeting audio, set _hide_dialog=false, _touched=true; after audio, speechBubble Canvas will be enabled.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 791898217,
+                  "method_name": "Touch",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Crystal",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 595963424,
+          "condition": "Call Crystal.TakeCoins() on MonoBehaviour fileID 791898217. If any GameObject with tag 'Coin' exists, dialog_fail is shown; otherwise dialog_teleport is shown. This validates scene branching without needing code specifics.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 791898217,
+                  "method_name": "TakeCoins",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Crystal",
+          "triggerring_time": 2.0,
+          "source_object_fileID": 595963424,
+          "condition": "Call Crystal.Teleport() on MonoBehaviour fileID 791898217. Expected: dialog_teleport deactivates; _audio.clip set to teleport_sound (guid 5d3186b95a5aaef4b87b7f3d2a4de69a), audio plays, _teleporting=true (vibration while playing); after audio completes, Update() shows dialog_end and clears _teleporting.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 791898217,
+                  "method_name": "Teleport",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Crystal",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 595963424,
+          "condition": "Call Crystal.Restart() on MonoBehaviour fileID 791898217. Expected: SceneManager.LoadScene(0) reloads the Maze scene.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 791898217,
+                  "method_name": "Restart",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (17)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 834924915,
+          "condition": "EventTrigger MonoBehaviour (fileID 114000011833207400, guid d0b148fe25e99eb48b9724523833bab1) maps eventID 0 to Waypoint.Enter on MonoBehaviour fileID 114000013353947326 (guid 18f754fc3d17b49db8e3d3dde994b993). Waypoint config: lerp_focus=0.4, scale_focus_min=1.1, scale_focus_max=1.4, color_hilight=(0.8,0.8,1,0.125). Expect Idle->Focused visual change.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (17)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 834924915,
+          "condition": "EventTrigger MonoBehaviour (fileID 114000011833207400) maps eventID 1 to Waypoint.Exit on MonoBehaviour fileID 114000013353947326. Exit only transitions when current state is Focused. Expect Focused->Idle and visuals blend via lerp_idle=0.5.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (17)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 834924915,
+          "condition": "Re-enter focus before click. EventTrigger eventID 0 -> Waypoint.Enter (fileID 114000013353947326). Ensures state is Focused prior to click.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (17)",
+          "triggerring_time": 1.2,
+          "source_object_fileID": 834924915,
+          "condition": "EventTrigger MonoBehaviour (fileID 114000011833207400) maps eventID 4 to Waypoint.Click on MonoBehaviour fileID 114000013353947326. Waypoint config: lerp_clicked=0.5, scale_clicked_max=2, lerp_hide=1, clip_click guid a72739540860de04b8b0d8869e601e2e. Expect audio plays, state Clicked then auto transitions to Approaching once _scale≈0.95*scale_clicked_max, calling Hide() and Approach() internally toward camera occupancy.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (8)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 863986015,
+          "condition": "Scene meta shows EventTrigger (MonoBehaviour fileID 114000011833207400, m_Script guid d0b148fe25e99eb48b9724523833bab1) with m_Calls eventID 0 (PointerEnter) bound to Waypoint.Enter on MonoBehaviour fileID 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993). Serialized config: lerp_focus=0.4, scale_focus_min=1.1, scale_focus_max=1.4, rotation_speed=90, etc. Expected: Waypoint state Idle -> Focused; color/scale/displacement lerp begins.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (8)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 863986015,
+          "condition": "Scene meta shows EventTrigger (MonoBehaviour fileID 114000011833207400) with m_Calls eventID 1 (PointerExit) bound to Waypoint.Exit on MonoBehaviour fileID 114000013353947326. Expected: If currently Focused, Waypoint state -> Idle (Exit only transitions when state==Focused).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (8)",
+          "triggerring_time": 2.0,
+          "source_object_fileID": 863986015,
+          "condition": "Scene meta shows EventTrigger (MonoBehaviour fileID 114000011833207400) with m_Calls eventID 4 (PointerClick) bound to Waypoint.Click on MonoBehaviour fileID 114000013353947326. Script Waypoint.Click() sets state=Clicked and plays clip_click. Update transitions Clicked -> Approaching once scaled near scale_clicked_max (2.0), then Approach() moves 'Camera Holder' to waypoint+cameraDisplacement (0,0.7,0) and Hide() blends to clear; then state becomes Occupied when camera reaches the target.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (15)",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 1137559537,
+          "condition": "Scene MonoBehaviour_0 id 114000011833207400 (EventTrigger) has m_Calls for eventID 0 (PointerEnter) -> Waypoint.Enter on MonoBehaviour_1 id 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993). Serialized state starts at Idle (0). Expect transition to Focused visuals (scale/color/displacement lerp).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (15)",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 1137559537,
+          "condition": "Scene MonoBehaviour_0 id 114000011833207400 (EventTrigger) has m_Calls for eventID 1 (PointerExit) -> Waypoint.Exit on MonoBehaviour_1 id 114000013353947326. Only transitions to Idle when current state is Focused (precondition satisfied by prior Enter).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (15)",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 1137559537,
+          "condition": "Re-enter focus to observe Focus state again before click. Uses same EventTrigger mapping as Enter (eventID 0) -> Waypoint.Enter on MonoBehaviour_1 id 114000013353947326.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (15)",
+          "triggerring_time": 2.0,
+          "source_object_fileID": 1137559537,
+          "condition": "Scene MonoBehaviour_0 id 114000011833207400 (EventTrigger) has m_Calls for eventID 4 (PointerClick) -> Waypoint.Click on MonoBehaviour_1 id 114000013353947326. Expect: state -> Clicked, AudioSource plays clip guid a72739540860de04b8b0d8869e601e2e, scale animates toward scale_clicked_max=2, then transition to Approaching which calls Hide() and Approach() to move 'Camera Holder' to waypoint.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (16)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1210626723,
+          "condition": "EventTrigger present (MonoBehaviour_0 id 114000011833207400, guid d0b148fe25e99eb48b9724523833bab1). m_Delegates eventID 0 -> Waypoint.Enter(). Target Waypoint script is MonoBehaviour_1 id 114000013353947326 (guid 18f754fc3d17b49db8e3d3dde994b993) with serialized config: lerp_focus=0.4, scale_focus_min=1.1, scale_focus_max=1.4, material guid f991f64383bb847ce8145e16b9439d98. Expected: state Idle->Focused, color/scale/displacement lerp using Focus().",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (16)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1210626723,
+          "condition": "EventTrigger m_Delegates eventID 1 -> Waypoint.Exit() on MonoBehaviour_1 id 114000013353947326 (guid 18f754fc3d17b49db8e3d3dde994b993). Expected: if currently Focused, state Focused->Idle; prevents non-working clicks when pointer leaves.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (16)",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 1210626723,
+          "condition": "EventTrigger m_Delegates eventID 4 -> Waypoint.Click() on MonoBehaviour_1 id 114000013353947326 (guid 18f754fc3d17b49db8e3d3dde994b993). Serialized config: lerp_clicked=0.5, scale_clicked_max=2, lerp_hide=1, rotation_speed=90, clip_click guid a72739540860de04b8b0d8869e601e2e. Expected: state -> Clicked, audio plays; then Update transitions to Approaching when scaled, calls Hide()+Approach(); eventual Occupied when camera matches waypoint position.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (10)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1213427145,
+          "condition": "EventTrigger m_Delegates eventID=0 (PointerEnter) -> calls Waypoint.Enter() on script_fileID=114000013353947326 (guid=18f754fc3d17b49db8e3d3dde994b993). Expect Idle->Focused with focus lerp=0.4, scale_focus=[1.1..1.4], material guid=f991f64383bb847ce8145e16b9439d98.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (10)",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 1213427145,
+          "condition": "EventTrigger m_Delegates eventID=4 (PointerClick) -> calls Waypoint.Click() on script_fileID=114000013353947326. Expect audio clip a72739540860de04b8b0d8869e601e2e to play, state->Clicked, scale anim toward scale_clicked_max=2.0 with lerp_clicked=0.5, eventual transition to Approaching when scaled >=95%.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (10)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 1213427145,
+          "condition": "Manual trigger of Waypoint.Approach() (public, no params) on script_fileID=114000013353947326 to simulate conditional navigation when clicked/focused. Approach sets 'Camera Holder' localPosition to waypoint initial_position + (0,0.7,0) and rotation=identity; on next Update, occupied==true should drive state Idle/Approaching->Occupied and Hide visuals (lerp_hide=1).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Approach",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Unknown",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1268464412,
+          "condition": "Scene wiring confirms EventTrigger MonoBehaviour (id 114000012955172588, script guid d0b148fe25e99eb48b9724523833bab1) has eventID 4 (PointerClick) that invokes Key.Collect on MonoBehaviour id 114000010113225802 (script guid f2253f7e5b4c14d6ca1d63312bab36c1). This MonoBehaviour matches the provided Key script (inherits Collectible) with fields poof, rotationSpeed, collect_sound, and door; 'door' is set via prefab modification to fileID 1602679153. Triggering Collect (public, no params) should call base Collect then door.Unlock().",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000010113225802,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (8)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1290483727,
+          "condition": "PrefabInstance fileID 1290483727 (Coin (8)) has an EventTrigger component (MonoBehaviour fileID 114000012973806018, script guid d0b148fe25e99eb48b9724523833bab1). Its m_Delegates contains eventID 4 (PointerClick) with a persistent call targeting MonoBehaviour fileID 114000012871899810 (script guid 4259efea429e3458b997fe590ca4b9f1, the Coin/Collectible script with fields: poof, rotationSpeed=160, collect_sound) and method 'Collect'. Manually trigger Collect to validate collection behavior when click events are not naturally fired.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (14)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1294627857,
+          "condition": "Scene EventTrigger (MonoBehaviour fileID 114000011833207400, m_Delegates eventID 0) is configured to call Waypoint.Enter on MonoBehaviour fileID 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993). This simulates PointerEnter to move state Idle -> Focused.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (14)",
+          "triggerring_time": 1.2,
+          "source_object_fileID": 1294627857,
+          "condition": "Scene EventTrigger (MonoBehaviour fileID 114000011833207400, m_Delegates eventID 4) is configured to call Waypoint.Click on MonoBehaviour fileID 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993). Expected: play clip_click (guid a72739540860de04b8b0d8869e601e2e), state Clicked then auto-transition to Approaching when scale (~lerp_clicked=0.5) nears scale_clicked_max=2; Update will call Approach() to move Camera Holder.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (14)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1294627857,
+          "condition": "Scene EventTrigger (MonoBehaviour fileID 114000011833207400, m_Delegates eventID 1) is configured to call Waypoint.Exit on MonoBehaviour fileID 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993). This simulates PointerExit; when current state is Focused it returns to Idle.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (11)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1455886844,
+          "condition": "EventTrigger MonoBehaviour_0 (guid d0b148fe25e99eb48b9724523833bab1) m_Calls: eventID 0 -> Waypoint.Enter on MonoBehaviour_1 (fileID 114000013353947326; guid 18f754fc3d17b49db8e3d3dde994b993). Use to transition Idle -> Focused. Serialized config on MonoBehaviour_1 matches script (lerp_focus=0.4, scale_focus_min=1.1, max=1.4, rotation_speed=90, material guid f991f643..., clip_click guid a7273954...).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (11)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1455886844,
+          "condition": "EventTrigger MonoBehaviour_0 m_Calls: eventID 1 -> Waypoint.Exit on MonoBehaviour_1 (fileID 114000013353947326). Only returns to Idle if currently Focused; validates hover-out path.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (11)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 1455886844,
+          "condition": "Re-enter focus before click. EventTrigger MonoBehaviour_0 m_Calls: eventID 0 -> Waypoint.Enter (fileID 114000013353947326).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (11)",
+          "triggerring_time": 0.6,
+          "source_object_fileID": 1455886844,
+          "condition": "Primary interaction: EventTrigger MonoBehaviour_0 m_Calls: eventID 4 -> Waypoint.Click on MonoBehaviour_1 (fileID 114000013353947326). Expected: audio clip a7273954... plays; state Idle/Focused -> Clicked -> Approaching; Hide + camera movement sequence begins per Waypoint.Update.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (11)",
+          "triggerring_time": 0.3,
+          "source_object_fileID": 1455886844,
+          "condition": "Supplemental in case automatic Approach is not observed (e.g., headless test without pointer-driven state loop). Call public Waypoint.Approach directly (MonoBehaviour_1 fileID 114000013353947326) to move 'Camera Holder' to waypoint.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Approach",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (7)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1527759708,
+          "condition": "EventTrigger component 114000012973806018 (script guid d0b148fe25e99eb48b9724523833bab1) defines m_Delegates with eventID 4 (PointerClick) that persistently calls method 'Collect' on component 114000012871899810 (script guid 4259efea429e3458b997fe590ca4b9f1). This is the MonoBehaviour attached to Coin (7) with fields poof, rotationSpeed=160, collect_sound. Manually trigger to validate collection behavior (poof effect, sound, and coin removal/disable).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (3)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1532113889,
+          "condition": "EventTrigger (MonoBehaviour fileID 114000012973806018, guid d0b148fe25e99eb48b9724523833bab1) on Coin (3) has m_Delegates with eventID 4 (PointerClick) whose m_Calls invoke Collect() on MonoBehaviour fileID 114000012871899810 (script guid 4259efea429e3458b997fe590ca4b9f1). This MonoBehaviour holds fields poof, rotationSpeed=160, collect_sound and represents the attached script to be tested. Collider present; no Rigidbody. Manually trigger Collect to validate collection behavior when click events may not occur automatically.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (4)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 1781955274,
+          "condition": "Test fail path: Door MonoBehaviour (component id 1602679153, script guid 39f8a5a2b11c2426cb2a2bea3e825751) starts locked=true; calling Open() should play open_fail_sound (guid b6a0517e9a9d14b7b8fd6be65f68f1a5) and remain Closed without movement.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 1602679153,
+                  "method_name": "Open",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (4)",
+          "triggerring_time": 3.6,
+          "source_object_fileID": 1781955274,
+          "condition": "Happy path: Unlock then Open the Door (component id 1602679153). Expect open_success_sound (guid e5a423fc890c5445fb9c3b126422891b), state transitions Closed->Opening->Opened, and Y position increases by ~7.0 units at 2.0 u/s.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 1602679153,
+                  "method_name": "Unlock",
+                  "parameter_fileID": []
+                },
+                {
+                  "script_fileID": 1602679153,
+                  "method_name": "Open",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (4)",
+          "triggerring_time": 3.6,
+          "source_object_fileID": 1781955274,
+          "condition": "Close after opened: After the door has reached Opened, calling Close() (component id 1602679153) should play open_success_sound and move Y back toward initial at 2.0 u/s until closed.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 1602679153,
+                  "method_name": "Close",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Unknown",
+          "triggerring_time": 0.8,
+          "source_object_fileID": 1633604867,
+          "condition": "Scene MonoBehaviour_0 (fileID 114000011833207400, guid d0b148fe25e99eb48b9724523833bab1) is an EventTrigger whose m_Delegates eventID 0 maps to MonoBehaviour_1.Waypoint.Enter (fileID 114000013353947326, guid 18f754fc3d17b49db8e3d3dde994b993). This simulates pointer enter, transitioning state Idle->Focused with serialized config: lerp_focus=0.4, scale_focus_min=1.1, scale_focus_max=1.4, displacement_idle_min=0, displacement_idle_max=0.4.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Unknown",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 1633604867,
+          "condition": "Scene MonoBehaviour_0 (EventTrigger) m_Delegates eventID 1 maps to MonoBehaviour_1.Waypoint.Exit (fileID 114000013353947326). Valid only when current state is Focused; returns to Idle. Tests focus exit path using serialized lerp_idle=0.5, color_hilight, and idle scalars.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Unknown",
+          "triggerring_time": 2.5,
+          "source_object_fileID": 1633604867,
+          "condition": "Scene MonoBehaviour_0 (EventTrigger) m_Delegates eventID 4 maps to MonoBehaviour_1.Waypoint.Click (fileID 114000013353947326). On click: plays clip guid a72739540860de04b8b0d8869e601e2e, sets state Clicked; as _scale approaches scale_clicked_max=2 with lerp_clicked=0.5, transitions to Approaching where Hide() runs (lerp_hide=1) and Approach() moves 'Camera Holder' to initial_position+(0,0.7,0). Rotation runs at rotation_speed=90. Wait time allows state to progress to Approaching/Occupied.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Last Waypoint",
+          "triggerring_time": 0.25,
+          "source_object_fileID": 1635797935,
+          "condition": "EventTrigger (MonoBehaviour fileID 114000011833207400, script guid d0b148fe25e99eb48b9724523833bab1) eventID 0 (PointerEnter) calls Waypoint.Enter() on MonoBehaviour fileID 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993). This should transition state Idle→Focused using serialized config: lerp_focus=0.4, scale_focus_min=1.1, scale_focus_max=1.4, rotation_speed=90.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Last Waypoint",
+          "triggerring_time": 0.25,
+          "source_object_fileID": 1635797935,
+          "condition": "EventTrigger (MonoBehaviour fileID 114000011833207400) eventID 1 (PointerExit) calls Waypoint.Exit() on MonoBehaviour fileID 114000013353947326. From Focused state this should return to Idle using lerp_idle=0.5.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Last Waypoint",
+          "triggerring_time": 1.0,
+          "source_object_fileID": 1635797935,
+          "condition": "EventTrigger (MonoBehaviour fileID 114000011833207400) eventID 4 (PointerClick) has m_Calls size 3: (0) Waypoint.Click() on fileID 114000013353947326; (1) Close() on fileID 1602679153; (2) MakeClickable() on fileID 791898217. Waypoint.Click() should play clip_click and transition Clicked→Approaching; Update.Approaching calls Approach() to move 'Camera Holder' to this waypoint (_initial_position+[0,0.7,0]) and then Occupied/Hidden according to state.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                },
+                {
+                  "script_fileID": 1602679153,
+                  "method_name": "Close",
+                  "parameter_fileID": []
+                },
+                {
+                  "script_fileID": 791898217,
+                  "method_name": "MakeClickable",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Unknown",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1781955274,
+          "condition": "MonoBehaviour fileID 114000011778842636 (Script GUID 39f8a5a2b11c2426cb2a2bea3e825751, class Door) attached to GameObject fileID 1000012519150908. Default state Closed, locked=true; open_fail_sound/open_success_sound are null; requires AudioSource. Note: this component id also appears in PrefabInstance.m_RemovedComponents for 1781955274—confirm the component exists at runtime.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000011778842636,
+                  "method_name": "Open",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Unknown",
+          "triggerring_time": 4.0,
+          "source_object_fileID": 1781955274,
+          "condition": "Door should open when unlocked. MonoBehaviour fileID 114000011778842636 (GUID 39f8a5a2b11c2426cb2a2bea3e825751). Expect: PlaySound(open_success_sound) then transition to Opening; door slides +7.0 on Y at 2.0 u/s (~3.5s).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000011778842636,
+                  "method_name": "Unlock",
+                  "parameter_fileID": []
+                },
+                {
+                  "script_fileID": 114000011778842636,
+                  "method_name": "Open",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Unknown",
+          "triggerring_time": 4.0,
+          "source_object_fileID": 1781955274,
+          "condition": "Close after door is Opening/Opened. MonoBehaviour fileID 114000011778842636 (GUID 39f8a5a2b11c2426cb2a2bea3e825751). Expect: PlaySound(open_success_sound), state -> Closing, door slides back toward initial Y. Note: code sets state to Opened when finished Closing (likely a bug); verify final state.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000011778842636,
+                  "method_name": "Close",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (5)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1801223270,
+          "condition": "Maze.unity GameObject 'Coin (5)' (PrefabInstance fileID 1801223270) includes MonoBehaviour id 114000012973806018 (script guid d0b148fe25e99eb48b9724523833bab1; EventTrigger) with m_Delegates eventID 4 whose PersistentCall targets MonoBehaviour id 114000012871899810 (script guid 4259efea429e3458b997fe590ca4b9f1; Collectible/Coin with fields poof, rotationSpeed=160, collect_sound) to invoke public no-arg method 'Collect'. Manually triggering ensures the Collect behavior even if pointer/collision events are not fired automatically.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (9)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 1814201180,
+          "condition": "Scene MonoBehaviour_1 (fileID 114000012973806018, script guid d0b148fe25e99eb48b9724523833bab1 - EventTrigger) has m_Delegates eventID 4 (PointerClick) configured to call MonoBehaviour_0. MonoBehaviour_0 (fileID 114000012871899810, script guid 4259efea429e3458b997fe590ca4b9f1) is the Coin/Collectible component attached to this object (fields: poof, rotationSpeed, collect_sound) and exposes public Collect() with no parameters. Manually trigger Collect() if the click event is not invoked automatically to validate the configured m_Calls (expect poof VFX, collect_sound SFX, and coin collection behavior).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (5)",
+          "triggerring_time": 0.25,
+          "source_object_fileID": 1859014015,
+          "condition": "Simulate EventTrigger PointerEnter (eventID:0) mapped via m_Calls to Waypoint.Enter on MonoBehaviour id 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993). Expected: state Idle->Focused; uses lerp_focus=0.4, scale_focus_min=1.1, scale_focus_max=1.4, displacement_idle_min=0, displacement_idle_max=0.4, rotation_speed=90.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (5)",
+          "triggerring_time": 0.25,
+          "source_object_fileID": 1859014015,
+          "condition": "Simulate EventTrigger PointerExit (eventID:1) mapped via m_Calls to Waypoint.Exit on MonoBehaviour id 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993). Expected: state Focused->Idle; lerp_idle=0.5 restores idle visuals (scale_idle_min=1, scale_idle_max=1, displacement 0..0.4 per animation).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (5)",
+          "triggerring_time": 2.0,
+          "source_object_fileID": 1859014015,
+          "condition": "Simulate EventTrigger PointerClick (eventID:4) mapped via m_Calls to Waypoint.Click on MonoBehaviour id 114000013353947326 (script guid 18f754fc3d17b49db8e3d3dde994b993). Expected: plays clip guid a72739540860de04b8b0d8869e601e2e; state -> Clicked (lerp_clicked=0.5 towards scale_clicked_max=2, color->color_hilight), then auto-transitions to Approaching when scaled >=95%; in Approaching, Hide() (lerp_hide=1) and Approach() move 'Camera Holder' to waypoint initial_position + (0,0.7,0), leading to Occupied.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (7)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 1963860340,
+          "condition": "Scene MonoBehaviour_1 id=114000013353947326 uses script GUID=18f754fc3d17b49db8e3d3dde994b993 (Waypoint). EventTrigger MonoBehaviour_0 id=114000011833207400 GUID=d0b148fe25e99eb48b9724523833bab1 maps m_Delegates: eventID 0 -> Enter (Focus state). Material/lerp/scale configured per scene. Expect waypoint to lerp to focus scale/color and levitate per Update().",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (7)",
+          "triggerring_time": 0.8,
+          "source_object_fileID": 1963860340,
+          "condition": "EventTrigger m_Delegates contains eventID 4 -> Click. Waypoint.Click should play AudioSource clip_click and set state to Clicked; Update() should lerp scale/color towards clicked values, then transition to Approaching when scale >= 0.95*scale_clicked_max.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (7)",
+          "triggerring_time": 0.3,
+          "source_object_fileID": 1963860340,
+          "condition": "Manual test of Waypoint.Approach (not wired via EventTrigger). Expected: moves GameObject.Find(\"Camera Holder\").transform.localPosition to waypoint initial position + (0,0.7,0) and resets rotation; Update() will then consider waypoint Occupied if cam.worldPosition equals that target.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Approach",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (7)",
+          "triggerring_time": 0.2,
+          "source_object_fileID": 1963860340,
+          "condition": "EventTrigger m_Delegates contains eventID 1 -> Exit. Only transitions to Idle from Focus per script. Use after Enter to validate Exit gating logic.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (13)",
+          "triggerring_time": 0.3,
+          "source_object_fileID": 1982376685,
+          "condition": "MonoBehaviour fileID 114000013353947326 (GUID 18f754fc3d17b49db8e3d3dde994b993) is Waypoint with serialized settings. EventTrigger (fileID 114000011833207400, GUID d0b148fe25e99eb48b9724523833bab1) m_Calls: eventID 0 -> Waypoint.Enter. Has_Event_Trigger: true; Collider: not present; Has_Rigidbody: false. Expected: Idle -> Focused animation.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (13)",
+          "triggerring_time": 0.3,
+          "source_object_fileID": 1982376685,
+          "condition": "Precondition: state is Focused (after Enter). EventTrigger m_Calls: eventID 1 -> Waypoint.Exit. Expected: Focused -> Idle to avoid non-working clicks.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (13)",
+          "triggerring_time": 1.5,
+          "source_object_fileID": 1982376685,
+          "condition": "EventTrigger m_Calls: eventID 4 -> Waypoint.Click. Expected: Idle/Focused -> Clicked; audio plays; scale -> scale_clicked_max (2.0), transitions to Approaching, Waypoint.Approach moves 'Camera Holder' to initial_position+(0,0.7,0), then state -> Occupied and Hide() makes waypoint invisible.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (11)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 2025712095,
+          "condition": "EventTrigger MonoBehaviour (id: 114000012973806018, guid: d0b148fe25e99eb48b9724523833bab1) has m_Delegates with eventID 4 (PointerClick) calling MonoBehaviour id 114000012871899810 (guid: 4259efea429e3458b997fe590ca4b9f1) method Collect. To ensure coverage without a real pointer click, manually invoke Collect(). Collider present (classID 135 SphereCollider), no Rigidbody.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (13)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 2040634251,
+          "condition": "MonoBehaviour fileID 114000012871899810 (guid 4259efea429e3458b997fe590ca4b9f1) is the Coin/Collectible script on Coin (13) with serialized fields poof, rotationSpeed=160, collect_sound. MonoBehaviour fileID 114000012973806018 (guid d0b148fe25e99eb48b9724523833bab1) is an EventTrigger with eventID=4 (PointerClick) whose m_Calls invoke Collect() on 114000012871899810. To ensure coverage without relying on pointer input, manually trigger Collect(). PrefabInstance id 2040634251 maps to Coin (13).",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (12)",
+          "triggerring_time": 0.5,
+          "source_object_fileID": 2065212193,
+          "condition": "MonoBehaviour_1 (fileID 114000013353947326, m_Script guid 18f754fc3d17b49db8e3d3dde994b993) is the Waypoint script provided. Serialized config matches: lerp_idle=0.5, lerp_focus=0.4, lerp_hide=1, lerp_clicked=0.5, scale_clicked_max=2, scale_animation=2, scale_idle_min=1, scale_idle_max=1, scale_focus_min=1.1, scale_focus_max=1.4, displacement_idle_min=0, displacement_idle_max=0.4, rotation_speed=90, material guid f991f64383bb847ce8145e16b9439d98, clip_click guid a72739540860de04b8b0d8869e601e2e. EventTrigger (MonoBehaviour_0, m_Script guid d0b148fe25e99eb48b9724523833bab1) has m_Calls: eventID 0 -> Waypoint.Enter, eventID 1 -> Waypoint.Exit, eventID 4 -> Waypoint.Click. Manually trigger Enter to drive state Idle -> Focused.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Enter",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (12)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 2065212193,
+          "condition": "While EventTrigger would normally raise this on pointer exit (eventID 1), invoke Exit explicitly to ensure Focused -> Idle transition even without pointer simulation.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Exit",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "MyWaypoint (12)",
+          "triggerring_time": 2.0,
+          "source_object_fileID": 2065212193,
+          "condition": "Simulate click (EventTrigger eventID 4 -> Waypoint.Click). Expect: _state Clicked, audio plays (clip_click), then Update transitions to Approaching when _scale >= 0.95 * scale_clicked_max (1.9 with current config), invoking Hide() and Approach() automatically.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Click",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000013353947326,
+                  "method_name": "Approach",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Trigger",
+          "source_object_name": "Coin (4)",
+          "triggerring_time": 0.1,
+          "source_object_fileID": 2128747074,
+          "condition": "MonoBehaviour fileID 114000012871899810 (guid 4259efea429e3458b997fe590ca4b9f1) is the Coin/Collectible script attached to Coin (4) with fields: poof, rotationSpeed=160, collect_sound. An EventTrigger MonoBehaviour fileID 114000012973806018 (guid d0b148fe25e99eb48b9724523833bab1) has m_Delegates eventID=4 (PointerClick) with m_Calls targeting method Collect on 114000012871899810. Manually invoke Collect to cover the interactable event even if pointer click is not fired automatically.",
+          "triggerring_events": [
+            {
+              "methodCallUnits": [
+                {
+                  "script_fileID": 114000012871899810,
+                  "method_name": "Collect",
+                  "parameter_fileID": []
+                }
+              ]
+            }
+          ],
+          "triggerred_events": []
+        }
+      ]
+    }
+  ]
+}
